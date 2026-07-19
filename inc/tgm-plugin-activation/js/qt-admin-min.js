@@ -1,0 +1,2 @@
+jQuery((function(e){"use strict";e("#proradio-bulletin-page").length>0&&e.ajax({type:"GET",cache:!1,beforeSend:function(e){e.withCredentials=!1},timeout:12e4,dataType:"html",url:"https://bulletin.pro.radio/index.php?nocaching="+Math.round(9999*Math.random()),async:!0,success:function(n){e("#proradio-bulletin-page").html(n).addClass("loaded")},fail:function(e){console.log("Bulletin cannot be loaded"),console.log(e)}})}));
+//# sourceMappingURL=qt-admin-min.js.map
