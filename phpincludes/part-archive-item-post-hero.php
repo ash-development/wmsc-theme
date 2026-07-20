@@ -46,7 +46,7 @@ Author URI: http://qantumthemes.com
 					<?php } ?>
 				</ul>
 		  		<h2 class="qt-title" style="max-width: 70%; margin-left: auto; margin-right: auto;">
-					<a href="<?php the_permalink(); ?>" class="qt-text-shadow qt-ellipsis-2 qt-t">
+					<a href="<?php the_permalink(); ?>" class="qt-text-shadow qt-t">
 						<?php the_title(); ?>
 					</a>
 				</h2>
