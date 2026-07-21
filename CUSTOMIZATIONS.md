@@ -28,6 +28,9 @@ Every change is wrapped in `function_exists()` so the theme still works if the p
   Class `qt-byline-fit` + footer script (§3) shrinks font to fit width (floor 10px).
 - **Title**: `max-width: 70%`, centered — keeps text out of the edge shadow.
   `qt-ellipsis-2` class removed so long titles wrap to as many lines as needed (no `…` truncation).
+  The `<a>` carries inline `display: block; width: 100%; height: auto; -webkit-line-clamp: unset;`
+  — required: the theme's mobile CSS turns it into a `-webkit-box` that collapses to
+  0 width (title invisible) without `qt-ellipsis-2`'s `width: 100%`, and clamps to 4 lines.
 - **Categories**:
   - "Featured" category (slug `featured`) skipped.
   - Primary category (Yoast "Make primary" setting; falls back to first category) bold red;
