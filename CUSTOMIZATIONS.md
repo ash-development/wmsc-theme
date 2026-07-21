@@ -87,6 +87,29 @@ Every change is wrapped in `function_exists()` so the theme still works if the p
 }
 ```
 
+```css
+/* Mobile hero slider: full-width slides (kill 300px cap + side peek), smaller titles */
+@media only screen and (max-width: 600px) {
+    .qt-slickslider-single .qt-item,
+    .qt-slickslider-single .slick-slide {
+        max-width: none !important;
+        width: calc(100vw - 40px) !important;
+        min-width: 0 !important;
+    }
+    .qt-part-item-post-hero .qt-title a {
+        font-size: 1.35rem !important;
+        line-height: 1.15 !important;
+    }
+}
+```
+
+Theme caps mobile slides at `max-width: 300px`, which lets neighboring slides peek
+through on phones; mobile title default is 1.8rem which wraps to 6–7 lines.
+
+Reminder: the site cache is **WP Rocket** — it keeps a separate mobile cache, so
+always "Clear cache" from the WP Rocket admin-bar menu after changes (a desktop-only
+purge leaves phones on stale HTML).
+
 The banner markup itself is a WPBakery Raw HTML element on the homepage
 (`.outer > .loop > .content`, JS-duplicated for seamless scroll); desktop speed is the
 `.loop { animation: loop-anim 25s ... }` rule that ships with that block.
