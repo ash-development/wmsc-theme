@@ -53,16 +53,18 @@ Every change is wrapped in `function_exists()` so the theme still works if the p
 **Not stored in theme files** — lives in the WordPress database. Reference copy:
 
 ```css
-/* Slider arrows: true vertical centering (icon glyph otherwise sits ~10px high) */
+/* Slider arrows: true vertical centering (icon glyph otherwise sits ~10px high),
+   icons at OUTER edges so they clear multi-line titles */
 .qt-slickslider-container .slick-arrow::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0;
+    left: 0;
+    right: auto;
 }
 .qt-slickslider-container .slick-arrow.slick-next::after {
-    right: auto;
-    left: 0;
+    left: auto;
+    right: 0;
 }
 
 /* Red marquee banner (WPBakery raw-HTML block on the homepage) */
